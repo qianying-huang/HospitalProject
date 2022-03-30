@@ -8,6 +8,7 @@ namespace HospitalProject.Controllers
 {
     public class HomeController : Controller
     {
+        //test change here
         public ActionResult Index()
         {
             return View();
