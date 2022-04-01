@@ -1,0 +1,13 @@
+﻿@model HospitalProject.Models.JobDto
+@{
+    ViewBag.Title = "Details";
+}
+
+<a href="/Job/List">Go back to job list</a>
+<h2>@Model.JobTitle</h2>
+<div>Department: @Model.DeptName</div>
+<div>Posted: @Model.JobDate</div>
+<div>Responsibilities: @Model.Responsibility</div>
+<div>Qualifications: @Model.Qualification</div>
+<div>Offer: @Model.Offer</div>
+

@@ -13,7 +13,7 @@
                     {
                         JobId = c.Int(nullable: false, identity: true),
                         JobTitle = c.String(),
-                        JobDate = c.DateTime(nullable: false),
+                        JobDate = c.DateTime(nullable: true),
                         Responsibility = c.String(),
                         Qualification = c.String(),
                         Offer = c.String(),

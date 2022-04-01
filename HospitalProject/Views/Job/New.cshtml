@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "New";
+}
+
+<h2>Create Job</h2>
+
+<form action="/Job/Create" method="POST">
+    <div>
+        <label>Title: </label> <input type="text" name="JobTitle" />
+    </div>
+    <div>
+        <label>Date: </label> <input type="datetime" name="DateTime" />
+    </div>
+    <div>
+        <label>Department ID: </label> <input type="number" name="DepartmentID" />
+    </div>
+    <div>
+        <label>Responsibilities: </label> <input type="text" name="Responsibilities" />
+    </div>
+    <div>
+        <label>Qualifications: </label> <input type="text" name="Qualifications" />
+    </div>
+    <div>
+        <label>Offer: </label> <input type="text" name="Offer" />
+    </div>
+    <div>
+        <input type="submit" value="Add Job"/>
+    </div>
+</form>
