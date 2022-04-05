@@ -14,7 +14,7 @@ Department CRUD\
 Department Views (List, New, Edit, DeleteConfirm, Details, Error)
 
 ### TODO:
-ListJobsForDepartment\
+ListJobsForDepartment
 
 Show department page:\
 -department info\
