@@ -12,7 +12,7 @@ namespace HospitalProject.Models
         [Key]
         public int JobId { get; set; }
         public string JobTitle { get; set; }
-        public DateTime JobDate { get; set; }
+
         public string Responsibility { get; set; }
         public string Qualification { get; set; }
         public string Offer { get; set; }
@@ -33,10 +33,10 @@ namespace HospitalProject.Models
     {
         public int JobId { get; set; }
         public string JobTitle { get; set; }
-        public DateTime JobDate { get; set; }
         public string Responsibility { get; set; }
         public string Qualification { get; set; }
         public string Offer { get; set; }
+        public int DeptId { get; set; }
         public string DeptName { get; set; }
     }
 }

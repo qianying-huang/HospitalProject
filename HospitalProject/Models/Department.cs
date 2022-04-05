@@ -12,4 +12,9 @@ namespace HospitalProject.Models
         public int DeptId { get; set; }
         public string DeptName { get; set; }
     }
+    public class DepartmentDto
+    {
+        public int DeptId { get; set; }
+        public string DeptName { get; set; }
+    }
 }

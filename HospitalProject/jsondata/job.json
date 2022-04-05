@@ -1,9 +1,8 @@
 ﻿{
-  "JobId": 7,
-  "JobTitle": "Assistant",
-  "JobDate": "2021,2,15",
-  "Responsibility": "Assistant responsibility New",
-  "Qualification": "Assistant qualification New",
-  "Offer": "Assistant offer",
-  "DeptId": 2
+  "JobId": 1020,
+  "JobTitle": "Housekeeper New",
+  "Responsibility": "Housekeeper responsibility",
+  "Qualification": "Housekeeper qualification",
+  "Offer": "Housekeeper offer",
+  "DeptId": 1
 }

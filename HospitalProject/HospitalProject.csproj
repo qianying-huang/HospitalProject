@@ -182,6 +182,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\DepartmentDataController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\JobController.cs" />
     <Compile Include="Controllers\JobDataController.cs" />
@@ -209,6 +210,10 @@
     <Compile Include="Migrations\202204010852376_Job-Department.designer.cs">
       <DependentUpon>202204010852376_Job-Department.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202204042002297_MissingJobDate.cs" />
+    <Compile Include="Migrations\202204042002297_MissingJobDate.designer.cs">
+      <DependentUpon>202204042002297_MissingJobDate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Department.cs" />
@@ -227,6 +232,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="jsondata\department.json" />
     <None Include="jsondata\job.json" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -278,6 +284,9 @@
     <Content Include="Views\Job\List.cshtml" />
     <Content Include="Views\Job\Details.cshtml" />
     <Content Include="Views\Job\New.cshtml" />
+    <Content Include="Views\Job\Error.cshtml" />
+    <Content Include="Views\Job\DeleteConfirm.cshtml" />
+    <Content Include="Views\Job\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -310,6 +319,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202204010852376_Job-Department.resx">
       <DependentUpon>202204010852376_Job-Department.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204042002297_MissingJobDate.resx">
+      <DependentUpon>202204042002297_MissingJobDate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

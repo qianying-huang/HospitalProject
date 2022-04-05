@@ -9,6 +9,7 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using HospitalProject.Models;
+using System.Diagnostics;
 
 namespace HospitalProject.Controllers
 {
@@ -27,10 +28,10 @@ namespace HospitalProject.Controllers
             {
                 JobId = j.JobId,
                 JobTitle = j.JobTitle,
-                JobDate = j.JobDate,
                 Responsibility = j.Responsibility,
                 Qualification = j.Qualification,
                 Offer = j.Offer,
+                DeptId = j.Department.DeptId,
                 DeptName = j.Department.DeptName
             }));
             return JobDtos;
@@ -46,10 +47,10 @@ namespace HospitalProject.Controllers
             {
                 JobId = Job.JobId,
                 JobTitle = Job.JobTitle,
-                JobDate = Job.JobDate,
                 Responsibility = Job.Responsibility,
                 Qualification = Job.Qualification,
                 Offer = Job.Offer,
+                DeptId = Job.Department.DeptId,
                 DeptName = Job.Department.DeptName
             };
             if (Job == null)
@@ -65,13 +66,18 @@ namespace HospitalProject.Controllers
         [HttpPost]
         public IHttpActionResult UpdateJob(int id, Job job)
         {
+            Debug.WriteLine("Reached the update job method");
             if (!ModelState.IsValid)
             {
+                Debug.WriteLine("Model state is invalid");
                 return BadRequest(ModelState);
             }
 
             if (id != job.JobId)
             {
+                Debug.WriteLine("ID mismatch");
+                Debug.WriteLine("GET parameter: " + id);
+                Debug.WriteLine("POST parameter: " + job.JobId);
                 return BadRequest();
             }
 
@@ -85,6 +91,7 @@ namespace HospitalProject.Controllers
             {
                 if (!JobExists(id))
                 {
+                    Debug.WriteLine("Job not found");
                     return NotFound();
                 }
                 else
@@ -92,7 +99,7 @@ namespace HospitalProject.Controllers
                     throw;
                 }
             }
-
+            Debug.WriteLine("None of the condition triggered");
             return StatusCode(HttpStatusCode.NoContent);
         }
 

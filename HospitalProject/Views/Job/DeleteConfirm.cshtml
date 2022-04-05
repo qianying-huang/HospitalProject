@@ -1,16 +1,16 @@
 ﻿@model HospitalProject.Models.JobDto
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "DeleteConfirm";
 }
 
-<a href="/Job/List">Go back to job list</a>
-<br />
-<a href="/Job/Edit/@Model.JobId">Update</a>
-<br />
-<a style="color:#ab2020;" href="/Job/DeleteConfirm/@Model.JobId">Delete</a>
+<h2>Are you sure you want to delete this job?</h2>
+<a href="/Job/List">Cancel</a>
 <h2>@Model.JobTitle</h2>
 <div>Department: @Model.DeptName</div>
 <div>Responsibilities: @Model.Responsibility</div>
 <div>Qualifications: @Model.Qualification</div>
 <div>Offer: @Model.Offer</div>
+<form action="/Job/Delete/@Model.JobId" method="POST">
+    <input type="submit" value="Confirm Delete" />
 
+</form>
