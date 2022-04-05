@@ -1,0 +1,19 @@
+﻿@model HospitalProject.Models.DepartmentDto
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Update Department</h2>
+<form action="/Department/Update/@Model.DeptId" method="POST">
+    <div style="display:none;">
+        @* Pass through the department ID *@
+        <input type="text" name="DeptId" value="@Model.DeptId" />
+    </div>
+    <div>
+        <label>Name: </label> <input type="text" name="DeptName" value="@Model.DeptName" />
+    </div>
+    <div>
+        <input type="submit" value="Update Department" />
+
+    </div>
+</form>
