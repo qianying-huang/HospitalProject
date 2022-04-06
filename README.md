@@ -10,7 +10,7 @@ The Department and Job tables have a 1-M relationships. A job belongs to one dep
 
 Leo (Lam) Nguyen: Patient, Appointment
 
-Anubhav Sharma: Doctor, Department
+Anubhav Sharma: Doctor, ListDoctorsForDepartment
 
 Anurag Negi: Article, Author
 
