@@ -11,7 +11,7 @@ Job CRUD, \
 Job Views(List, New, Edit, DeleteConfirm, Details, Error),\
 Department CRUD\
 Department Views (List, New, Edit, DeleteConfirm, Details, Error)
- -ListJobsForDepartment
+ - ListJobsForDepartment
 
 ### TODO:
 ListDoctorsForDepartment
