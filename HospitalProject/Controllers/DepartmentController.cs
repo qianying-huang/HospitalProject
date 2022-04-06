@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using System.Net.Http;
 using System.Diagnostics;
 using HospitalProject.Models;
+using HospitalProject.Models.ViewModels;
 using System.Web.Script.Serialization;
 
 namespace HospitalProject.Controllers
@@ -38,10 +39,22 @@ namespace HospitalProject.Controllers
             //objective: communicate with our Department data api to retrieve one Department
             //curl https://localhost:44338/api/departmentdata/finddepartment/{id}
 
+            DetailsDepartment ViewModel = new DetailsDepartment();
+
             string url = "departmentdata/finddepartment/" + id;
             HttpResponseMessage response = client.GetAsync(url).Result;
-            DepartmentDto selecteddepartment = response.Content.ReadAsAsync<DepartmentDto>().Result;
-            return View(selecteddepartment);
+
+            DepartmentDto SelectedDepartment = response.Content.ReadAsAsync<DepartmentDto>().Result;
+
+            ViewModel.SelectedDepartment = SelectedDepartment;
+            //showcase information about jobs related to this department
+            //send a request to gather information about jobs related to a particular department ID
+            url = "jobdata/listjobsfordepartment/" + id;
+            response = client.GetAsync(url).Result;
+            IEnumerable<JobDto> RelatedJobs = response.Content.ReadAsAsync<IEnumerable<JobDto>>().Result;
+
+            ViewModel.RelatedJobs = RelatedJobs;
+            return View(ViewModel);
         }
 
         // GET: Department/New

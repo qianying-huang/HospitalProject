@@ -7,6 +7,7 @@ using System.Net.Http;
 using System.Diagnostics;
 using HospitalProject.Models;
 using System.Web.Script.Serialization;
+using HospitalProject.Models.ViewModels;
 
 namespace HospitalProject.Controllers
 {
@@ -55,10 +56,14 @@ namespace HospitalProject.Controllers
         // GET: Job/New
         public ActionResult New()
         {
-           //information about all departments in the system
-           //GET api/departmentdata/listdepartment
+            //information about all departments in the system
+            //GET api/departmentdata/listdepartment
 
-            return View();
+            string url = "departmentdata/listdepartments";
+            HttpResponseMessage response = client.GetAsync(url).Result;
+            IEnumerable<DepartmentDto> DepartmentOptions = response.Content.ReadAsAsync<IEnumerable<DepartmentDto>>().Result;
+
+            return View(DepartmentOptions);
         }
 
         // POST: Job/Create
@@ -87,11 +92,23 @@ namespace HospitalProject.Controllers
         // GET: Job/Edit/5
         public ActionResult Edit(int id)
         {
+            UpdateJob ViewModel = new UpdateJob();
+
+            // the existing job information
             string url = "jobdata/findjob/" + id;
             HttpResponseMessage response = client.GetAsync(url).Result;
             JobDto SelectedJob = response.Content.ReadAsAsync<JobDto>().Result;
+            ViewModel.SelectedJob = SelectedJob;
 
-            return View(SelectedJob);
+            // all departments to choose from when updating this job
+            // the existing job information
+            url = "departmentdata/listdepartments/";
+            response = client.GetAsync(url).Result;
+            IEnumerable<DepartmentDto> DepartmentOptions = response.Content.ReadAsAsync<IEnumerable<DepartmentDto>>().Result;
+
+            ViewModel.DepartmentOptions = DepartmentOptions;
+
+            return View(ViewModel);
         }
 
         // POST: Job/Update/5

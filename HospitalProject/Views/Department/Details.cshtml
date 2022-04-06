@@ -1,12 +1,21 @@
-﻿@model HospitalProject.Models.DepartmentDto
+﻿@model HospitalProject.Models.ViewModels.DetailsDepartment
 @{
     ViewBag.Title = "Details";
 }
 <a href="/Department/List">Go back to department list</a>
 <br />
-<a href="/Department/Edit/@Model.DeptId">Update</a>
+<a href="/Department/Edit/@Model.SelectedDepartment.DeptId">Update</a>
 <br />
-<a style="color:#ab2020;" href="/Department/DeleteConfirm/@Model.DeptId">Delete</a>
-<h2>@Model.DeptName</h2>
-<div>Department ID: @Model.DeptId</div>
+<a style="color:#ab2020;" href="/Department/DeleteConfirm/@Model.SelectedDepartment.DeptId">Delete</a>
+<h2>@Model.SelectedDepartment.DeptName</h2>
+<div>Department ID: @Model.SelectedDepartment.DeptId</div>
 
+<div style="margin-top:100px;">
+    <h3>Jobs related to this department</h3>
+    @foreach (var job in Model.RelatedJobs)
+    {
+        <a href="/Job/Details/@job.JobId">@job.JobTitle</a>
+        <br />
+
+    }
+</div>

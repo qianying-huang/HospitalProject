@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<HospitalProject.Models.DepartmentDto>
 @{
     ViewBag.Title = "New";
 }
@@ -10,7 +10,14 @@
         <label>Title: </label> <input type="text" name="JobTitle" />
     </div>
     <div>
-        <label>Department ID: </label> <input type="number" name="DeptId" />
+        <label>Department: </label>
+        <select name="DeptId">
+            @foreach (var department in Model)
+            {
+                <option value="@department.DeptId">@department.DeptName</option>
+
+            }
+        </select>
     </div>
     <div>
         <label>Responsibilities: </label> <input type="text" name="Responsibility" />

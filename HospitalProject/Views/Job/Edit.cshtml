@@ -1,28 +1,40 @@
-﻿@model HospitalProject.Models.JobDto
+﻿@model HospitalProject.Models.ViewModels.UpdateJob
 @{
     ViewBag.Title = "Edit";
 }
 
 <h2>Update Job</h2>
-<form action="/Job/Update/@Model.JobId" method="POST">
+<form action="/Job/Update/@Model.SelectedJob.JobId" method="POST">
     <div style="display:none;">
         @* Pass through the job ID *@
-        <input type="text" name="JobId" value="@Model.JobId" />
+        <input type="text" name="JobId" value="@Model.SelectedJob.JobId" />
     </div>
     <div>
-        <label>Title: </label> <input type="text" name="JobTitle" value="@Model.JobTitle" />
+        <label>Title: </label> <input type="text" name="JobTitle" value="@Model.SelectedJob.JobTitle" />
     </div>
     <div>
-        <label>Department ID: </label> <input type="number" name="DeptId" value="@Model.DeptId" />
+        <label>Department ID: </label>
+        <select name="DeptId">
+            @foreach (var department in Model.DepartmentOptions)
+            {
+                string selected = "";
+                if ( department.DeptId == Model.SelectedJob.DeptId)
+                {
+                    selected = "selected";
+                }
+                <option value="@department.DeptId" @selected>@department.DeptName</option>
+
+            }
+        </select>
     </div>
     <div>
-        <label>Responsibilities: </label> <input type="text" name="Responsibility" value="@Model.Responsibility" />
+        <label>Responsibilities: </label> <input type="text" name="Responsibility" value="@Model.SelectedJob.Responsibility" />
     </div>
     <div>
-        <label>Qualifications: </label> <input type="text" name="Qualification" value="@Model.Qualification" />
+        <label>Qualifications: </label> <input type="text" name="Qualification" value="@Model.SelectedJob.Qualification" />
     </div>
     <div>
-        <label>Offer: </label> <input type="text" name="Offer" value="@Model.Offer" />
+        <label>Offer: </label> <input type="text" name="Offer" value="@Model.SelectedJob.Offer" />
     </div>
     <div>
         <input type="submit" value="Update Job" />

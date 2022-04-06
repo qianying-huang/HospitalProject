@@ -17,9 +17,9 @@ namespace HospitalProject.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: api/JobData/ListJobs
         [HttpGet]
-        public IEnumerable<JobDto> ListJobs()
+        [ResponseType(typeof(JobDto))]
+        public IHttpActionResult ListJobs()
         {
             List<Job> Jobs = db.Jobs.ToList();
             List<JobDto> JobDtos = new List<JobDto>();
@@ -34,7 +34,38 @@ namespace HospitalProject.Controllers
                 DeptId = j.Department.DeptId,
                 DeptName = j.Department.DeptName
             }));
-            return JobDtos;
+            return Ok(JobDtos);
+        }
+
+
+
+
+        /// <summary>
+        /// Gathers information about all jobs related to a particular department ID
+        /// </summary>
+        /// <returns></returns>
+        /// <param name="id">Department ID</param>
+        /// <example>
+        /// GET: api/JobData/ListJobsForDepartment/1
+        /// </example>
+        [HttpGet]
+        [ResponseType(typeof(JobDto))]
+        public IHttpActionResult ListJobsForDepartment(int id)
+        {
+            List<Job> Jobs = db.Jobs.Where(j=>j.DeptId==id).ToList();
+            List<JobDto> JobDtos = new List<JobDto>();
+
+            Jobs.ForEach(j => JobDtos.Add(new JobDto()
+            {
+                JobId = j.JobId,
+                JobTitle = j.JobTitle,
+                Responsibility = j.Responsibility,
+                Qualification = j.Qualification,
+                Offer = j.Offer,
+                DeptId = j.Department.DeptId,
+                DeptName = j.Department.DeptName
+            }));
+            return Ok(JobDtos);
         }
 
         // GET: api/JobData/FindJob/5
