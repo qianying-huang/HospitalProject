@@ -25,16 +25,16 @@ Anubhav Sharma:
 Anurag Negi:
 
 Qianying (Kate) Huang: 
-- Job CRUD, \
-- Job Views(List, New, Edit, DeleteConfirm, Details, Error),\
-- Department CRUD,\
+- Job CRUD, 
+- Job Views(List, New, Edit, DeleteConfirm, Details, Error),
+- Department CRUD,
 - Department Views (List, New, Edit, DeleteConfirm, Details, Error)
 - ListJobsForDepartment
 
 ### TODO ->:
-ListDoctorsForDepartment
-ListAppointmentsForPatient
-ListAppointmentsForDoctor
+ListDoctorsForDepartment\
+ListAppointmentsForPatient\
+ListAppointmentsForDoctor\
 ListLogForAdmin
 
 
