@@ -9,8 +9,11 @@ The Department and Job tables have a 1-M relationships. A job belongs to one dep
 ### Need To Be Done:
 
 Leo (Lam) Nguyen: Patient, Appointment
+
 Anubhav Sharma: Doctor, Department
+
 Anurag Negi: Article, Author
+
 Qianying (Kate) Huang: Adminstrator 
 
 
