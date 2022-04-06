@@ -11,8 +11,16 @@ The Department and Job tables have a 1-M relationships. A job belongs to one dep
 Job CRUD, \
 Job Views(List, New, Edit, DeleteConfirm, Details, Error),\
 Department CRUD\
-Department Views (List, New, Details, Error)
+Department Views (List, New, Edit, DeleteConfirm, Details, Error)
 
 ### TODO:
-Department Views(Edit, DeleteConfirm)
+ListJobsForDepartment
+
+Show department page:\
+-department info\
+-all jobs that are applicable for that department\
+-all doctors in that department
+
+
+
 
