@@ -6,7 +6,7 @@ Job Table has 6 columns: JobId (pk), JobTitle, Responsibility, Qualification, Of
 
 The Department and Job tables have a 1-M relationships. A job belongs to one department. A department can have many jobs.
 
-## ///Need To Be Done:
+### ///Need To Be Done:
 
 Leo (Lam) Nguyen: Patient, Appointment
 
@@ -17,7 +17,7 @@ Anurag Negi: Article, Author
 Qianying (Kate) Huang: Adminstrator 
 
 
-## ////Done:
+### ////Done:
 Leo (Lam) Nguyen:
 
 Anubhav Sharma:
@@ -31,7 +31,7 @@ Qianying (Kate) Huang:
 - Department Views (List, New, Edit, DeleteConfirm, Details, Error)
 - ListJobsForDepartment
 
-##### TODO ->:
+### TODO ->:
 ListDoctorsForDepartment
 ListAppointmentsForPatient
 ListAppointmentsForDoctor
