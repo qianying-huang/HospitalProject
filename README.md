@@ -9,7 +9,7 @@ The Department and Job tables have a 1-M relationships. A job belongs to one dep
 ### Done:
 Job CRUD, \
 Job Views(List, New, Edit, DeleteConfirm, Details, Error),\
-Department CRUD\
+Department CRUD,\
 Department Views (List, New, Edit, DeleteConfirm, Details, Error)
  - ListJobsForDepartment
 
