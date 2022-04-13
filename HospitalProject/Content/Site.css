@@ -1,13 +1,62 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: white;
+    border-radius: 0.3rem;
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+
+a, a:visited, .glyphicon {
+    color: black;
+    text-decoration: none;
 }
+
+    a:hover {
+        color: black;
+        text-decoration: none;
+    }
+
+.viewLink:hover, .editLink:hover {
+    color: blue;
+}
+
+.delLink:hover {
+    color: red;
+}
+
+.container {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+    .container > .navbar-header {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .row {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+.navbar, .navbar-nav > li > a:hover {
+    border: none;
+    background-color: #6667AB;
+    color: white;
+}
+
+.jumbotron {
+    background: none;
+    padding-top: 50px;
+}
+    .jumbotron .btn {
+        background-color: #6667AB;
+        color: white;
+    }
+
+
 
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
@@ -22,3 +71,162 @@ select,
 textarea {
     max-width: 280px;
 }
+
+
+@media only screen and (max-width: 768 px) {
+    .navbar-collapse collapse, .navbar-header {
+        color: #333333;
+    }
+
+    a, .glyphicon {
+        text-decoration: none;
+        color: #333333;
+    }
+
+        a:hover {
+            color: #333333;
+        }
+}
+
+
+#hero {
+    width: 100%;
+    background-size: cover;
+    position: relative;
+}
+
+    #hero:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    #hero .container {
+        position: relative;
+        padding: 50px 0px 0px 0px;
+        text-align: center;
+    }
+
+    #hero h1 {
+        margin: 0;
+        font-size: 56px;
+        font-weight: 700;
+        line-height: 64px;
+        color: #fff;
+        font-family: "Poppins", sans-serif;
+    }
+
+        #hero h1 span {
+            color: #9d9d9d;
+        }
+
+    #hero h2 {
+        color: rgba(255, 255, 255, 0.9);
+        margin: 10px 0 0 0;
+        font-size: 24px;
+    }
+
+    #hero .icon-box {
+        padding: 30px 20px;
+        margin-bottom: 40px;
+        transition: ease-in-out 0.3s;
+        border: 1px solid #333333;
+        height: 100%;
+        text-align: center;
+    }
+
+        #hero .icon-box i {
+            font-size: 32px;
+            line-height: 1;
+            color: #9d9d9d;
+        }
+
+        #hero .icon-box h3 {
+            font-weight: 700;
+            margin: 10px 0 0 0;
+            padding: 0;
+            line-height: 1;
+            font-size: 20px;
+            line-height: 26px;
+        }
+
+            #hero .icon-box h3 a {
+                transition: ease-in-out 0.3s;
+            }
+
+                #hero .icon-box h3 a:hover {
+                    color: #9d9d9d;
+                }
+
+        #hero .icon-box:hover {
+            border-color: #9d9d9d;
+        }
+
+@media (min-width: 1024px) {
+    #hero {
+        background-attachment: fixed;
+    }
+}
+
+@media (max-width: 768px) {
+    #hero {
+        height: auto;
+    }
+
+        #hero h1 {
+            font-size: 28px;
+            line-height: 36px;
+        }
+
+        #hero h2 {
+            font-size: 20px;
+            line-height: 24px;
+        }
+}
+
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+.section-title {
+    padding-bottom: 40px;
+}
+
+    .section-title h2 {
+        font-size: 14px;
+        font-weight: 500;
+        padding: 0;
+        line-height: 1px;
+        margin: 0 0 5px 0;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #aaaaaa;
+        font-family: "Poppins", sans-serif;
+    }
+
+        .section-title h2::after {
+            content: "";
+            width: 120px;
+            height: 1px;
+            display: inline-block;
+            margin: 4px 10px;
+        }
+
+    .section-title p {
+        margin: 0;
+        margin: 0;
+        font-size: 36px;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-family: "Poppins", sans-serif;
+        color: #151515;
+    }
+
