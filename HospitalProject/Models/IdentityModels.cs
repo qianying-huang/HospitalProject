@@ -27,9 +27,11 @@ namespace HospitalProject.Models
         {
         }
 
-        //Add a job entity to our system
+        //Add a entity to our system
         public DbSet<Job> Jobs { get; set; }
         public DbSet<Department> Departments { get; set; }
+        public DbSet <Patient> Patients { get; set; } 
+        public DbSet <Appointments> Appointments { get; set; }
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();

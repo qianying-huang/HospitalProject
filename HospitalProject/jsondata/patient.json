@@ -1,0 +1,9 @@
+﻿{
+  "PatientID": 1,
+  "PatientFName": "Leo",
+  "PatientLName": "Nguyen",
+  "PatientGender": "Male",
+  "PatientPhone": "6478644338",
+  "DOB": "2012-03-29 3:40:03 PM",
+  "AppointmentNo": "123"
+}
