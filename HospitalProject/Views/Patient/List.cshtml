@@ -1,0 +1,45 @@
+﻿@model HospitalProject.Models.ViewModels.PatientList
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+
+<div>
+    <a href="/patient/New" class="btn btn-dblue btn-lg" role="button">
+        <span class="glyphicon glyphicon-user glyphsize"></span>
+        <br />New
+        <span class="glyphicon glyphicon-plus"></span>
+        <br />Patient
+    </a>
+</div>
+
+<h2>List of Patients</h2>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Date of Birth</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Appointment No</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var patient in Model.Patients)
+        {
+            <tr>
+                <th scope="row">@patient.PatientID</th>
+                <td><a href="/Patient/Details/@patient.PatientID">@patient.PatientFName @patient.PatientLName</a></td>
+                <td>@patient.PatientGender</td>
+                <td>@patient.DOB.ToLongDateString()</td>
+                <td>@patient.PatientPhone</td>
+                <td>@patient.AppointmentNo</td>
+                <td><a href="/Patient/Details/@patient.PatientID"><span class="viewLink glyphicon glyphicon-eye-open"></span></a></td>
+                <td><a href="/Patient/Edit/@patient.PatientID"><span class="editLink glyphicon glyphicon-pencil"></span></a></td>
+                <td><a href="/Patient/DeleteConfirm/@patient.PatientID"><span class="delLink glyphicon glyphicon-trash"></span></a></td>
+            </tr>
+        }
+    </tbody>
+</table>

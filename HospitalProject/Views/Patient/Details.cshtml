@@ -1,0 +1,73 @@
+﻿@model HospitalProject.Models.ViewModels.DetailsPatient
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div id="containershow">
+    <nav>
+        <!-- Back to patient list -->
+        <a href="/patient/list" class="btn btn-dblue btn-lg" role="button">
+            <span class="glyphicon glyphicon-arrow-left"></span> Back to
+            <br />the Patient list
+        </a>
+        <!-- Update patient button -->
+        <a href="/patient/edit/@Model.SelectedPatient.PatientID" class="btn btn-dblue btn-lg" role="button">
+            <span class="glyphicon glyphicon-home glyphsize"></span>
+            <br />Update
+            <span class="glyphicon glyphicon-edit"></span>
+        </a>
+        <!-- Delete patient button -->
+        <a style="color:#ab2020;" href="/patient/deleteconfirm/@Model.SelectedPatient.PatientID" class="btn btn-dblue btn-lg" role="button">
+            <span class="glyphicon glyphicon-home glyphsize"></span>
+            <br />Delete
+            <span class="glyphicon glyphicon-minus"></span>
+        </a>
+    </nav>
+
+    <h2>Patient Details: @Model.SelectedPatient.PatientFName @Model.SelectedPatient.PatientLName</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Date of Birth</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Appointment No</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">@Model.SelectedPatient.PatientID</th>
+                <td>@Model.SelectedPatient.PatientGender</td>
+                <td>@Model.SelectedPatient.DOB.ToLongDateString()</td>
+                <td>@Model.SelectedPatient.PatientPhone</td>
+                <td>@Model.SelectedPatient.AppointmentNo</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3>List of Appointments for @Model.SelectedPatient.PatientFName @Model.SelectedPatient.PatientLName</h3>
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Time</th>
+                <th scope="col">Date</th>
+                <th scope="col">Reason</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var appointment in Model.RelatedAppointments)
+            {
+                <tr>
+                    <td><a href="/Appointment/Details/@appointment.AppointID">@appointment.Time</a></td>
+                    <td><a href="/Appointment/Details/@appointment.AppointID">@appointment.Date.ToLongDateString()</a></td>
+                    <td><a href="/Appointment/Details/@appointment.AppointID"> @appointment.Reason</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
