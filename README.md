@@ -19,6 +19,9 @@ Qianying (Kate) Huang: Adminstrator
 
 ### ////Done:
 Leo (Lam) Nguyen:
+- Update Site layout
+- Patient CRUD,
+- Patient Views(List, New, Edit, DeleteConfirm, Details, Error),
 
 Anubhav Sharma:
 
