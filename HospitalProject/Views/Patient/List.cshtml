@@ -7,10 +7,8 @@
 
 <div>
     <a href="/patient/New" class="btn btn-dblue btn-lg" role="button">
-        <span class="glyphicon glyphicon-user glyphsize"></span>
-        <br />New
-        <span class="glyphicon glyphicon-plus"></span>
-        <br />Patient
+        <span class="glyphicon glyphicon-floppy-save"></span>
+        <br />New Patient
     </a>
 </div>
 
@@ -36,9 +34,9 @@
                 <td>@patient.DOB.ToLongDateString()</td>
                 <td>@patient.PatientPhone</td>
                 <td>@patient.AppointmentNo</td>
-                <td><a href="/Patient/Details/@patient.PatientID"><span class="viewLink glyphicon glyphicon-eye-open"></span></a></td>
-                <td><a href="/Patient/Edit/@patient.PatientID"><span class="editLink glyphicon glyphicon-pencil"></span></a></td>
-                <td><a href="/Patient/DeleteConfirm/@patient.PatientID"><span class="delLink glyphicon glyphicon-trash"></span></a></td>
+                <td><a href="/Patient/Details/@patient.PatientID"><span class="viewLink  glyphicon glyphicon-floppy-disk"></span></a></td>
+                <td><a href="/Patient/Edit/@patient.PatientID"><span class="editLink glyphicon glyphicon glyphicon-floppy-open"></span></a></td>
+                <td><a href="/Patient/DeleteConfirm/@patient.PatientID"><span class="delLink glyphicon glyphicon-floppy-remove"></span></a></td>
             </tr>
         }
     </tbody>

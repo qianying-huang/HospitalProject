@@ -314,6 +314,10 @@
     <Content Include="Scripts\jquery-3.6.0.min.map" />
     <Content Include="Views\Patient\List.cshtml" />
     <Content Include="Views\Patient\Details.cshtml" />
+    <Content Include="Views\Patient\New.cshtml" />
+    <Content Include="Views\Patient\DeleteConfirm.cshtml" />
+    <Content Include="Views\Patient\Error.cshtml" />
+    <Content Include="Views\Patient\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

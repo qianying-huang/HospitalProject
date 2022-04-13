@@ -48,11 +48,11 @@ namespace HospitalProject.Controllers
             PatientDto selectedPatient = response.Content.ReadAsAsync<PatientDto>().Result;
             ViewModel.SelectedPatient = selectedPatient;
 
-            url = "AppointmentsData/ListAppointmentsByPatient/" + id;
+            /*url = "AppointmentsData/ListAppointmentsByPatient/" + id;
             response = client.GetAsync(url).Result;
             IEnumerable<AppointmentsDto> relatedAppointments = response.Content.ReadAsAsync<IEnumerable<AppointmentsDto>>().Result;
 
-            ViewModel.RelatedAppointments = relatedAppointments;
+            ViewModel.RelatedAppointments = relatedAppointments;*/
 
             return View(ViewModel);
         }
@@ -98,8 +98,7 @@ namespace HospitalProject.Controllers
 
         // POST: Patient/Update/5
         [HttpPost]
-        [Authorize(Roles = "Admin")]
-
+    
         public ActionResult Update(int id, Patient patient)
         {
   

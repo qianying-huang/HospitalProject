@@ -9,20 +9,18 @@
     <nav>
         <!-- Back to patient list -->
         <a href="/patient/list" class="btn btn-dblue btn-lg" role="button">
-            <span class="glyphicon glyphicon-arrow-left"></span> Back to
-            <br />the Patient list
+            <span class="glyphicon glyphicon-backward"></span> Back to
+            <br />the Patient List
         </a>
         <!-- Update patient button -->
         <a href="/patient/edit/@Model.SelectedPatient.PatientID" class="btn btn-dblue btn-lg" role="button">
-            <span class="glyphicon glyphicon-home glyphsize"></span>
             <br />Update
-            <span class="glyphicon glyphicon-edit"></span>
+            <span class="glyphicon glyphicon-floppy-saved"></span>
         </a>
         <!-- Delete patient button -->
         <a style="color:#ab2020;" href="/patient/deleteconfirm/@Model.SelectedPatient.PatientID" class="btn btn-dblue btn-lg" role="button">
-            <span class="glyphicon glyphicon-home glyphsize"></span>
             <br />Delete
-            <span class="glyphicon glyphicon-minus"></span>
+            <span class="glyphicon glyphicon-floppy-remove"></span>
         </a>
     </nav>
 
@@ -49,25 +47,3 @@
     </table>
 </div>
 
-<h3>List of Appointments for @Model.SelectedPatient.PatientFName @Model.SelectedPatient.PatientLName</h3>
-<div>
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">Time</th>
-                <th scope="col">Date</th>
-                <th scope="col">Reason</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var appointment in Model.RelatedAppointments)
-            {
-                <tr>
-                    <td><a href="/Appointment/Details/@appointment.AppointID">@appointment.Time</a></td>
-                    <td><a href="/Appointment/Details/@appointment.AppointID">@appointment.Date.ToLongDateString()</a></td>
-                    <td><a href="/Appointment/Details/@appointment.AppointID"> @appointment.Reason</a></td>
-                </tr>
-            }
-        </tbody>
-    </table>
-</div>

@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "New";
+}
+
+<h2>New</h2>
+
+<div>
+    <a href="/Patient/List" class="btn btn-dblue btn-lg" role="button">
+        <span class="glyphicon glyphicon-backward"></span> Back to
+        <br />the Patient List
+    </a>
+</div>
+
+<h2>Add a New Patient</h2>
+<form action="/patient/Create" method="POST" class="newForm">
+    <div class="form-group">
+        <label>First Name:</label>
+        <input type="text" name="patientFName" id="patientFName" />
+    </div>
+    <div class="form-group">
+        <label>Last Name:</label>
+        <input type="text" name="patientLName" id="patientLName" />
+    </div>
+    <div class="form-group">
+        <label>Gender:</label>
+        <input type="text" name="PatientGender" id="PatientGender" />
+    </div>
+    <div class="form-group">
+        <label>Date of birth:</label>
+        <input type="date" name="DOB" id="DOB" />
+    </div>
+    <div class="form-group">
+        <label>Appointment Number:</label>
+        <input type="text" name="AppointmentNo" id="AppointmentNo" />
+    </div>
+    <div class="form-group">
+        <label>Phone Number:</label>
+        <input type="tel" name="PatientPhone" id="PatientPhone" />
+    </div>
+    <button type="submit" class="btn btn-primary" value="Add Patient">Add Patient</button>
+</form>
