@@ -14,7 +14,7 @@ Anubhav Sharma: Doctor, ListDoctorsForDepartment
 
 Anurag Negi: Article, Author
 
-Qianying (Kate) Huang: Adminstrator 
+Qianying (Kate) Huang: Role Based Authentication & Conditional Rendering for Job and Department 
 
 
 ### ////Done:
