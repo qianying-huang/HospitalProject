@@ -1,0 +1,17 @@
+@model HospitalProject.Models.DoctorDetailDto
+@{
+    ViewBag.Title = "DeleteConfirmation";
+}
+
+
+<a href="/doctorDetail/details/@Model.DrId" class="btn btn-primary"> Go back</a>
+<h2>DeleteConfirmation</h2>
+
+<div class="alert alert-warning deletebox">
+    <h2>Sure, want to delete ? </h2>
+    <h3>@Model.DrFname @Model.DrLname</h3>
+    <p>Doctor Position : @Model.DrPosition</p>
+    <form action="/doctorDetail/delete/@Model.DrId" method="post">
+        <input class="btn btn-danger" type="submit" value="Delete" />
+    </form>
+</div>
