@@ -8,7 +8,7 @@ The Department and Job tables have a 1-M relationships. A job belongs to one dep
 
 ### ///Need To Be Done:
 
-Leo (Lam) Nguyen: Patient, Appointment
+Leo (Lam) Nguyen: Bug fixed Appointment
 
 Anubhav Sharma: Doctor, ListDoctorsForDepartment
 
