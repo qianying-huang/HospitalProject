@@ -20,8 +20,10 @@ Qianying (Kate) Huang: Role Based Authentication & Conditional Rendering for Job
 ### ////Done:
 Leo (Lam) Nguyen:
 - Update Site layout
+- Appointment CRUD (Still has bugs!)
+- Appointment Views(List, New, Edit, DeleteConfirm, Details, Error)
 - Patient CRUD,
-- Patient Views(List, New, Edit, DeleteConfirm, Details, Error),
+- Patient Views(List, New, Edit, DeleteConfirm, Details, Error)
 
 Anubhav Sharma:
 -CRUD for Doctor,
