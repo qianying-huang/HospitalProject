@@ -14,13 +14,20 @@ Anubhav Sharma: Doctor, ListDoctorsForDepartment
 
 Anurag Negi: Article, Author
 
-Qianying (Kate) Huang: Adminstrator 
+Qianying (Kate) Huang: Role Based Authentication & Conditional Rendering for Job and Department 
 
 
 ### ////Done:
 Leo (Lam) Nguyen:
+- Update Site layout
+- Patient CRUD,
+- Patient Views(List, New, Edit, DeleteConfirm, Details, Error),
 
 Anubhav Sharma:
+-CRUD for Doctor,
+-admin user can update,create or delete information,
+-view the links for adding, updating and deleting information,
+-Added some styling to my pages as well as to the website
 
 Anurag Negi:
 
@@ -32,7 +39,6 @@ Qianying (Kate) Huang:
 - ListJobsForDepartment
 
 ### TODO ->:
-ListDoctorsForDepartment\
 ListAppointmentsForPatient\
 ListAppointmentsForDoctor\
 ListLogForAdmin
