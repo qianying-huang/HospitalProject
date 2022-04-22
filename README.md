@@ -26,7 +26,7 @@ Leo (Lam) Nguyen:
 Anubhav Sharma:
 -CRUD for Doctor,
 -admin user can update,create or delete information,
--Only Admin users can view the links for adding, updating and deleting information,
+-view the links for adding, updating and deleting information,
 -Added some styling to my pages as well as to the website
 
 Anurag Negi:
