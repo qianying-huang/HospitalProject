@@ -1,0 +1,20 @@
+﻿@model HospitalProject.Models.AppointmentsDto
+
+
+@{
+    ViewBag.Title = "DeleteConfirm";
+}
+
+<a href="/Appointment/List" class="btn btn-dblue btn-lg" role="button">
+    <span class="glyphicon glyphicon-arrow-left"></span> Back to
+    <br />the Appointment list
+</a>
+
+<br />
+
+<h2 class="text-center">Are you sure you want to delete @Model.AppointID appointment on @Model.Date for @Model.Reason at @Model.Time?</h2>
+<a href="/Appointment/List">Cancel</a>
+<form action="/Appointment/Delete/@Model.AppointID" method="POST" class="text-center">
+    <button type="submit" class="delBtn" value="Delete Appointment"><span class="trashIcon glyphicon glyphicon-trash"></span> Delete</button>
+</form>
+

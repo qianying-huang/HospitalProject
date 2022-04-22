@@ -1,0 +1,54 @@
+﻿@model HospitalProject.Models.AppointmentsDto
+
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <nav>
+        <!-- Back to appointment's list -->
+        <a href="/Appointment/List" class="btn btn-dblue btn-lg" role="button">
+            <span class="glyphicon glyphicon-arrow-left"></span> Back to
+            <br />the Appointment list
+        </a>
+        <!-- Update appointment button -->
+        <a href="/Appointment/Edit/@Model.AppointID" class="btn btn-dblue btn-lg" role="button">
+            <span class="glyphicon glyphicon-user glyphsize"></span>
+            <br />Update
+            <span class="glyphicon glyphicon-edit"></span>
+            <br />Appointment
+        </a>
+        <!-- Delete appointment button -->
+        <a href="/Appointment/DeleteConfirm/@Model.AppointID" class="btn btn-dblue btn-lg" role="button">
+            <span class="glyphicon glyphicon-user glyphsize"></span>
+            <br />Delete
+            <span class="glyphicon glyphicon-minus"></span>
+            <br />Appointment
+        </a>
+    </nav>
+</div>
+
+<h2>Appointment Details:</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Date</th>
+            <th scope="col">Time</th>
+            <th scope="col">Reason</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">@Model.AppointID</th>
+            <th>@Model.PatientFName @Model.PatientLName</th>
+            <th>@Model.Date.ToLongDateString()</th>
+            <th>@Model.Time</th>
+            <th>@Model.Reason</th>
+        </tr>
+    </tbody>
+</table>

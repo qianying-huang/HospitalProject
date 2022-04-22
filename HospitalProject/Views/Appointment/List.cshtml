@@ -1,0 +1,43 @@
+﻿@model HospitalProject.Models.ViewModels.AppointmentList
+@{
+    ViewBag.Title = "List";
+}
+
+<div>
+    <a href="/Appointment/New" class="btn btn-dblue btn-lg" role="button">
+        <span class="glyphicon glyphicon-user glyphsize"></span>
+        <br />New
+        <span class="glyphicon glyphicon-plus green"></span>
+        <br />Appointment
+    </a>
+</div>
+
+
+<h2>List of Appointments</h2>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Date</th>
+            <th scope="col">Time</th>
+            <th scope="col">Reason</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var appointment in Model.Appointments)
+        {
+        <tr>
+            <th scope="row">@appointment.AppointID</th>
+            <td><a href="/Appointment/Details/@appointment.AppointID">@appointment.PatientFName @appointment.PatientLName</a></td>
+            <td>@appointment.Date.ToLongDateString()</td>
+            <td>@appointment.Time</td>
+            <td>@appointment.Reason</td>
+            <td><a href="/Appointment/Details/@appointment.AppointID"><span class="viewLink glyphicon glyphicon-eye-open"></span></a></td>
+            <td><a href="/Appointment/Edit/@appointment.AppointID"><span class="editLink glyphicon glyphicon-pencil"></span></a></td>
+            <td><a href="/Appointment/DeleteConfirm/@appointment.AppointID"><span class="delLink glyphicon glyphicon-trash"></span></a></td>
+        </tr>
+        }
+    </tbody>
+</table>
+

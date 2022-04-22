@@ -1,0 +1,41 @@
+﻿@model IEnumerable<HospitalProject.Models.PatientDto>
+
+
+@{
+    ViewBag.Title = "New";
+}
+
+<div>
+    <a href="/Appointment/List" class="btn btn-dblue btn-lg" role="button">
+        <span class="glyphicon glyphicon-arrow-left"></span> Back to
+        <br />the Appointment list
+    </a>
+</div>
+
+<h2>Create New Appointment</h2>
+
+<form action="/Appointment/Create" method="POST" class="newForm">
+    <div class="form-group">
+        <label>Date:</label>
+        <input type="date" name="date" id="myDate" />
+    </div>
+    <div class="form-group">
+        <label>Time:</label>
+        <input type="text" name="time" />
+    </div>
+    <div class="form-group">
+        <label>Reason:</label>
+        <input type="text" name="reason" />
+    </div>
+    <div class="form-group">
+        <label>Patient:</label>
+        <select name="PID">
+            @foreach (var patient in Model)
+            {
+                <option value="@patient.PatientID">@patient.PatientFName @patient.PatientLName</option>
+            }
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary" value="Add Appontment">Create Appointment</button>
+</form>
+

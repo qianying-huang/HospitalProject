@@ -18,9 +18,11 @@ namespace HospitalProject.Models
 
         //An appointment belongs to one patient
         //A patient can have many appointments
+
         [ForeignKey("Patient")]
         public int PatientID { get; set; }
         public virtual Patient Patient { get; set; }
+
     }
 
     public class AppointmentsDto
@@ -29,8 +31,8 @@ namespace HospitalProject.Models
         public DateTime Date { get; set; }
         public string Time { get; set; }
         public string Reason { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public string PatientFName { get; set; }
+        public string PatientLName { get; set; }
         public int PatientID { get; set; }
     }
 }
