@@ -1,0 +1,33 @@
+﻿@model HospitalProject.Models.ViewModels.UpdateArticle
+
+@{ ViewBag.Title = "Edit"; }
+
+<h2>Edit</h2>
+
+<form action="/Article/update" method="POST">
+    <div class="form-group">
+        <label class="control-label">Title:</label>
+        <input type="text" name="ArticleTitle" value="@Model.SelectedArticle.ArticleTitle" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <label for="message">ArticleBody</label>
+        <textarea class="form-control"
+                  id="message"
+                  name="ArticleBody"
+                  value="@Model.SelectedArticle.ArticleBody"
+                  cols="30"
+                  rows="10"
+                  placeholder="Enter your post"
+                  required></textarea>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label">Author:</label>
+        <select name="AuthorID">
+            <option value="@Model.SelectedArticle.AuthorID">@Model.SelectedArticle.Author.AuthorFname @Model.SelectedArticle.Author.AuthorLname</option>
+        </select>
+    </div>
+
+    <button class="btn btn-primary" type="submit">Save</button>
+</form>

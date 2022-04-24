@@ -32,6 +32,9 @@ namespace HospitalProject.Models
         public DbSet<Department> Departments { get; set; }
         public DbSet <Patient> Patients { get; set; } 
         public DbSet <Appointments> Appointments { get; set; }
+        public DbSet<Author> Authors { get; set; }
+
+        public DbSet<Article> Articles { get; set; }
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();

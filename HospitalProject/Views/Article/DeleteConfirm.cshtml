@@ -1,0 +1,14 @@
+﻿@{ ViewBag.Title = "DeleteConfirm"; }
+
+<h2>Are you sure you want to delete this Article?</h2>
+<a href="/Article/List">Cancel</a>
+<h2>@Model.ArticleTitle</h2>
+
+<div>Article Name: @Model.ArticleTitle</div>
+<div>Article Time @Model.Published</div>
+<div>Article Id: @Model.ArticleID</div>
+<div>Author Id: @Model.AuthorId</div>
+
+<form action="/Article/Delete/@Model.ArticleTitle" method="POST">
+    <input type="submit" value="Confirm Delete" />
+</form>

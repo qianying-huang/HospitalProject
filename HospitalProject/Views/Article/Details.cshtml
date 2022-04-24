@@ -1,0 +1,18 @@
+﻿@model HospitalProject.Models.ViewModels.DetailsArticle
+
+@{ ViewBag.Title = "Details"; }
+<a href="/Article/List">Go back to list</a>
+<h2>
+    @Model.SelectedArticle.ArticleTitle
+</h2>
+
+<div>
+    Publish Time: @Model.SelectedArticle.Published.ToString("HH:mm tt")
+</div>
+<div>
+    Author: @Model.SelectedArticle.Author.AuthorFname @Model.SelectedArticle.Author.AuthorLname
+</div>
+
+<div>
+    Body : @Model.SelectedArticle.ArticleBody
+</div>

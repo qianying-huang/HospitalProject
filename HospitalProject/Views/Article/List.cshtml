@@ -1,0 +1,40 @@
+﻿@model IEnumerable<HospitalProject.Models.ArticlesDto>
+@{ ViewBag.Title = "List"; }
+
+<h2>Article List</h2>
+<p>
+    @Html.ActionLink("Add New Article", "New")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            ArticleTitle
+        </th>
+        <th>
+            Published Time:
+        </th>
+        <th>
+            Author:
+        </th>
+    </tr>
+    @foreach (var Article in Model)
+    {
+<tr>
+    <td>
+        @Article.ArticleTitle
+    </td>
+    <td>
+        @Article.Published.ToString("HH:mm tt")
+    </td>
+    <td>
+        @Article.Author.AuthorFname
+        @Article.Author.AuthorLname
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = Article.ArticleID }) |
+        @Html.ActionLink("Details", "Details", new { id = Article.ArticleID }) |
+        @Html.ActionLink("Delete", "DeleteConfirm", new { id = Article.ArticleID })
+    </td>
+</tr>}
+
+</table>
