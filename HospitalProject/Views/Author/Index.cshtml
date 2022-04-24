@@ -1,0 +1,54 @@
+﻿@model IEnumerable<HospitalProject.Models.Author>
+
+@{ ViewBag.Title = "Index"; }
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "New")
+</p>
+
+
+@*@using (html.beginform("index", "home", formmethod.get))
+    {
+        <b>search option</b>@html.radiobutton("option", "name")<text>name</text>
+        @html.radiobutton("option", "id")
+        <text>id</text> @html.textbox("search")
+        <input type="submit"
+               name="submit"
+               value="search" />
+
+    }*@
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AuthorFname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AuthorLname)
+        </th>
+        <th></th>
+    </tr>
+
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.AuthorFname)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.AuthorLname)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.AuthorID }) |
+        @Html.ActionLink("Details", "Details", new { id = item.AuthorID }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.AuthorID })
+    </td>
+</tr>}
+
+</table>
+
+

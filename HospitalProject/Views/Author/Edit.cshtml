@@ -1,0 +1,31 @@
+﻿@model HospitalProject.Models.Author
+
+@{ ViewBag.Title = "Edit"; }
+
+<h2>Edit</h2>
+
+<form action="/author/update" method="post">
+    <input type="hidden" name="id" value="@Model.AuthorID" />
+    <div class="form-group">
+        <label class="control-label">First Name</label>
+        <input class="form-control" type="text" name="AuthorFname" value="@Model.AuthorFname" required />
+    </div>
+    <div class="form-group">
+        <label class="control-label">Last Name</label>
+        <input class="form-control" type="text" name="AuthorLname" value="@Model.AuthorLname" required />
+    </div>
+    <div class="form-group">
+        <label class="control-label">First Name</label>
+        <input class="form-control" type="text" name="Email" value="@Model.Email" required />
+    </div>
+    <div class="form-group">
+        <label class="control-label">First Name</label>
+        <input class="form-control" type="tel" name="Phone" value="@Model.Phone" required />
+    </div>
+
+    <button class="btn btn-primary" type="submit">Save</button>
+</form>
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

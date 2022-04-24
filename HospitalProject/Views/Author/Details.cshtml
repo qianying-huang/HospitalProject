@@ -1,0 +1,21 @@
+﻿@model HospitalProject.Models.Author
+
+@{ ViewBag.Title = "Details"; }
+
+<h2>Details</h2>
+
+<div>
+    <h4>Author Details</h4>
+    <Label>First Name: </Label>
+    <div>@Model.AuthorFname</div>
+    <Label>Last Name: </Label>
+    <div>@Model.AuthorLname</div>
+    <Label>Email: </Label>
+    <div>@Model.Email</div>
+    <Label>Phone: </Label>
+    <div>@Model.Phone</div>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AuthorID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

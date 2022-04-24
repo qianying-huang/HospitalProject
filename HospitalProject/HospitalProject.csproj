@@ -338,18 +338,21 @@
     <Content Include="Views\Appointment\Error.cshtml" />
     <Content Include="Views\Appointment\New.cshtml" />
     <Content Include="Views\Appointment\List.cshtml" />
-    <Content Include="Views\Article\View.cshtml" />
     <Content Include="Views\Article\DeleteConfirm.cshtml" />
     <Content Include="Views\Article\List.cshtml" />
     <Content Include="Views\Article\New.cshtml" />
     <Content Include="Views\Article\Details.cshtml" />
     <Content Include="Views\Article\Error.cshtml" />
     <Content Include="Views\Article\Edit.cshtml" />
+    <Content Include="Views\Author\Details.cshtml" />
+    <Content Include="Views\Author\Edit.cshtml" />
+    <Content Include="Views\Author\Error.cshtml" />
+    <Content Include="Views\Author\Index.cshtml" />
+    <Content Include="Views\Author\New.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Data\" />
-    <Folder Include="Views\Author\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
