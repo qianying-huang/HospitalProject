@@ -32,6 +32,9 @@ Anubhav Sharma:
 -Added some styling to my pages as well as to the website
 
 Anurag Negi:
+-CRUD FOR ARTICLE (add,delete,edit,details,view)
+-CRUD FOR AUTHOR (add,delete,edit,details)
+
 
 Qianying (Kate) Huang: 
 - Job CRUD, 
